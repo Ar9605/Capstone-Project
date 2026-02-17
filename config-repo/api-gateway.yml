@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    urls:
+      - name: User Service API
+        url: /v3/api-docs/user-service
+      - name: Product Service API
+        url: /v3/api-docs/product-service
+      - name: Inventory Service API
+        url: /v3/api-docs/inventory-service
+      - name: Management Service API
+        url: /v3/api-docs/management-service
+
+jwt:
+  secret: 5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437
