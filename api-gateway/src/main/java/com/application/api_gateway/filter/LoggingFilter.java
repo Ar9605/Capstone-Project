@@ -26,9 +26,9 @@ public class LoggingFilter implements GlobalFilter, Ordered {
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final HttpClient httpClient = HttpClient.newHttpClient();
 
-    // The Splunk details we just set up!
+
     private final String SPLUNK_URL = "http://localhost:8088/services/collector/event";
-    private final String SPLUNK_TOKEN = "6e8d75d7-15b0-4f67-9cc5-7f3a94fe5f4c";
+    private final String SPLUNK_TOKEN = " ;
 
     @Override
     @SuppressWarnings("UseSpecificCatch")
